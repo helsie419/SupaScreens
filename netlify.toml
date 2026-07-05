@@ -1,0 +1,118 @@
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blinds"
+  to = "/blinds.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/curtains"
+  to = "/curtains.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/plantation-shutters"
+  to = "/plantation-shutters.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/outdoor-blinds-and-awnings"
+  to = "/outdoor-blinds-and-awnings.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/retractable-door-screens"
+  to = "/retractable-door-screens.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/retractable-window-screens"
+  to = "/retractable-window-screens.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/security-doors"
+  to = "/security-doors.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kind-words"
+  to = "/kind-words.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contac-us"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contac-us/"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-json/*"
+  to = "/"
+  status = 404
+
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/"
+  status = 404
+
+[[redirects]]
+  from = "/feed/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/comments/*"
+  to = "/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "upgrade-insecure-requests"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
