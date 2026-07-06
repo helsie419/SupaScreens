@@ -1,73 +1,7 @@
 
 [[redirects]]
-  from = "/about"
-  to = "/about.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blinds"
-  to = "/blinds.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/curtains"
-  to = "/curtains.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/plantation-shutters"
-  to = "/plantation-shutters.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/outdoor-blinds-and-awnings"
-  to = "/outdoor-blinds-and-awnings.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/retractable-door-screens"
-  to = "/retractable-door-screens.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/retractable-window-screens"
-  to = "/retractable-window-screens.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/security-doors"
-  to = "/security-doors.html"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/products"
   to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/kind-words"
-  to = "/kind-words.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/contact"
-  to = "/contact.html"
   status = 301
   force = true
 
@@ -114,5 +48,10 @@
 
 [[headers]]
   for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
