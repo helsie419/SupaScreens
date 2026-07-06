@@ -209,3 +209,81 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Contact form submission confirmation popup (AJAX interceptor)
+(function () {
+  var form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var formData = new FormData(form);
+    var body = new URLSearchParams(formData).toString();
+
+    // Show loading state on button
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    fetch(form.getAttribute('action') || window.location.pathname, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Submission failed');
+
+        // Success: Inject and show modal popup
+        showSuccessModal();
+        form.reset();
+      })
+      .catch(function (err) {
+        console.error(err);
+        alert('There was a problem submitting your request. Please try again or call us at 1300 158 699.');
+      })
+      .finally(function () {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      });
+  });
+
+  function showSuccessModal() {
+    var modal = document.querySelector('.sc-modal-overlay');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.className = 'sc-modal-overlay';
+      modal.innerHTML =
+        '<div class="sc-modal-card">' +
+        '  <div class="sc-modal-icon">' +
+        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+        '      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>' +
+        '      <polyline points="22 4 12 14.01 9 11.01"/>' +
+        '    </svg>' +
+        '  </div>' +
+        '  <h2>message sent!</h2>' +
+        '  <p>Thank you for contacting SupaScreens. Our team will get back to you shortly to organise your free measure and quote.</p>' +
+        '  <button type="button" class="btn btn--solid sc-modal-close">Close</button>' +
+        '</div>';
+      document.body.appendChild(modal);
+
+      var closeBtn = modal.querySelector('.sc-modal-close');
+      closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) close();
+      });
+    }
+
+    function close() {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    setTimeout(function () {
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }, 10);
+  }
+})();
+
+
