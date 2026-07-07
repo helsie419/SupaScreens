@@ -34,7 +34,7 @@
   font-size:3.5rem;
   font-weight:700;
   margin:0 0 1rem;
-  text-transform:lowercase;
+  text-transform:none;
 }
 .home-hero__subtitle{
   font-size:1.1rem;
@@ -167,7 +167,7 @@
   font-style:italic;
   font-size:3.25rem;
   font-weight:700;
-  text-transform:lowercase;
+  text-transform:none;
   margin:0;
   line-height:1.25;
 }
