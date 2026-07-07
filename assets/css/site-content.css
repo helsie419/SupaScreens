@@ -164,7 +164,7 @@
   position:relative;
   color:#fff;
   font-family:var(--sc-font-display);
-  font-style:italic;
+  font-style:normal;
   font-size:3.25rem;
   font-weight:700;
   text-transform:none;
@@ -191,7 +191,7 @@
   font-weight:600;
   color:var(--sc-charcoal);
   margin:0 0 1rem;
-  text-transform:lowercase;
+  text-transform:none;
 }
 .section__heading--center{text-align:center;}
 
@@ -256,7 +256,7 @@
   font-size:1.05rem;
   font-weight:600;
   color:var(--sc-charcoal);
-  text-transform:lowercase;
+  text-transform:none;
   margin:0 0 0.5rem;
 }
 .feature-card p{
@@ -322,7 +322,7 @@
   font-size:1.4rem;
   font-weight:600;
   color:var(--sc-charcoal);
-  text-transform:lowercase;
+  text-transform:none;
   margin:0 0 0.75rem;
 }
 .collection p{
@@ -340,11 +340,11 @@
 }
 .cta-banner h2{
   font-family:var(--sc-font-display);
-  font-style:italic;
+  font-style:normal;
   font-size:2.1rem;
   font-weight:700;
   margin:0 0 1rem;
-  text-transform:lowercase;
+  text-transform:none;
 }
 .cta-banner p{
   max-width:34rem;
@@ -457,7 +457,7 @@
 }
 .contact-info h2{
   font-size:1.6rem;
-  text-transform:lowercase;
+  text-transform:none;
   color:var(--sc-charcoal);
   margin:0 0 1.5rem;
 }
@@ -564,4 +564,13 @@
 }
 @media (max-width:480px){
   .gallery-grid{grid-template-columns:1fr;}
+}
+
+.cta-phone-link{
+  color:inherit;
+  text-decoration:underline;
+  font-weight:inherit;
+}
+.cta-phone-link:hover{
+  color:var(--sc-mint);
 }
