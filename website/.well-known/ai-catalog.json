@@ -1,0 +1,48 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "urn:air": "urn:air:supascreens.com.au:organization",
+      "name": "SupaScreens business summary",
+      "description": "Inline summary of the SupaScreens business entity: contact details, service area and product ranges.",
+      "mediaType": "application/json",
+      "inline": {
+        "name": "SupaScreens",
+        "url": "https://supascreens.com.au/",
+        "telephone": "+61 1300 158 699",
+        "email": "sales@supascreens.com.au",
+        "areaServed": "Melbourne, Victoria, Australia",
+        "products": [
+          "Curtains",
+          "Blinds",
+          "Plantation Shutters",
+          "Security Doors",
+          "Retractable Door Screens",
+          "Retractable Window Screens",
+          "Outdoor Blinds and Awnings"
+        ]
+      }
+    },
+    {
+      "urn:air": "urn:air:supascreens.com.au:llms-txt",
+      "name": "llms.txt summary",
+      "description": "Plain-language summary of SupaScreens and a link index for AI agents, per the llms.txt convention.",
+      "mediaType": "text/plain",
+      "url": "https://supascreens.com.au/llms.txt"
+    },
+    {
+      "urn:air": "urn:air:supascreens.com.au:agents-md",
+      "name": "AGENTS.md guide",
+      "description": "Guide describing site offerings and agent connection methods, per the agents.md convention.",
+      "mediaType": "text/markdown",
+      "url": "https://supascreens.com.au/AGENTS.md"
+    },
+    {
+      "urn:air": "urn:air:supascreens.com.au:sitemap",
+      "name": "XML sitemap",
+      "description": "Full list of indexable pages on supascreens.com.au.",
+      "mediaType": "application/xml",
+      "url": "https://supascreens.com.au/sitemap.xml"
+    }
+  ]
+}
