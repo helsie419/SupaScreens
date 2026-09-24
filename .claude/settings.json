@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes playwright screenshot --browser=chromium --viewport-size=1440,900 http://localhost:8080/404.html /tmp/404-page-fixed.png)",
+      "Bash(npx --yes playwright screenshot --browser=chromium --viewport-size=1440,900 http://localhost:8080/404.html /tmp/404-oops.png)",
+      "Bash(awk '{print NR\": \"length\\($0\\)}' index.html)",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(python3 -c ' *)",
+      "Bash(xargs du -k)",
+      "Bash(awk '$1>100')",
+      "Bash(cp Images/supascreens-melbourne-made-premium-seal-badge.webp /private/tmp/claude-501/-Users-helen-AI-Agency-Supascreens/97167535-71b7-4737-ac74-909cc5770c5d/scratchpad/badge-orig.webp)",
+      "Bash(sips -Z 360 Images/supascreens-melbourne-made-premium-seal-badge.webp --out Images/supascreens-melbourne-made-premium-seal-badge.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/supascreens-melbourne-made-premium-seal-badge.webp)",
+      "Bash(sort -u -t: -k2)",
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(python3 -m http.server 8791)",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/supascreens-sheer-curtains-balcony-door.webp)",
+      "Bash(python3 -c \"import playwright; print\\('playwright python available'\\)\")",
+      "Bash(npx --no-install playwright --version)",
+      "Read(//Applications/**)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Bash(pip3 install *)"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -oE '\\\\-\\\\-e-global-color-[a-z0-9]+:\\\\s*#[0-9A-Fa-f]{3,6}' assets/css/bundle.css)",
+      "Bash(grep -oE '\\\\-\\\\-ast-global-color-[0-9]+:\\\\s*#[0-9A-Fa-f]{3,6}' assets/css/bundle.css)",
+      "Bash(grep -oE 'h1,h2,h3,h4,h5,h6[^{]*\\\\{color:[^;]*' index.html)",
+      "Bash(python3 -c ' *)",
+      "Bash(npx --yes playwright screenshot --browser=chromium --viewport-size=1440,900 http://localhost:8080/blinds.html /tmp/blinds-color-fix.png)",
+      "Bash(cwebp -version)",
+      "Bash(npx --yes playwright screenshot --browser=chromium --viewport-size=1440,900 http://localhost:8080/blinds.html /tmp/nav-widened.png)",
+      "Bash(rm -rf Images)",
+      "Bash(mv Images_webp Images)",
+      "Bash(grep -l 'CURTAINS' index.html products.html)",
+      "Bash(awk -F: '{print $2}')",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/supascreens-melbourne-made-premium-seal-badge.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/supascreens-logo-window-furnishings-banner.webp)",
+      "Bash(kill 32196)",
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(python3 -m http.server 8791)",
+      "Bash(node nav-check2.js)",
+      "Read(//Users/helen/AI Agency/**)",
+      "Bash(tar -tzf \"/Users/helen/AI Agency/Supascreens/uploads-backup-20260703-112744.tar.gz\")",
+      "Bash(grep -iE \"\\\\.\\(mp4|mov|webm\\)$\")"
+    ]
+  }
+}
